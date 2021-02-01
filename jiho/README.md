@@ -1,23 +1,7 @@
-# 알고리즘
+###### *Algo*
 
-## 백준 - 단계별로 풀어보기 [->](https://www.acmicpc.net/step)
+# *Algorithm*
 
-### 12. 정렬
+###### 백준 - 단계별로 풀어보기 [<img src="https://img.icons8.com/ios/250/000000/circled-up-right-2.png" width="14">](https://www.acmicpc.net/step)
 
-#### 1. 수 정렬하기 [(2750)](https://www.acmicpc.net/problem/2750)
-
-#### 2. 수 정렬하기 [(2751)](https://www.acmicpc.net/problem/2751)
-
-#### 3. 수 정렬하기 [(10989)](https://www.acmicpc.net/problem/10989)
-
-#### 4. 통계학 [(2108)](https://www.acmicpc.net/problem/2108)
-
-#### 5. 소트인사이드 [(1427)](https://www.acmicpc.net/problem/1427)
-
-#### 6. 좌표 정렬하기 [(11650)](https://www.acmicpc.net/problem/11650)
-
-#### 7. 좌표 정렬하기 2 [(11651)](https://www.acmicpc.net/problem/11651)
-
-#### 8. 단어 정렬 [(1181)](https://www.acmicpc.net/problem/1181)
-
-#### 9. 나이순 정렬 [(10814)](https://www.acmicpc.net/problem/10814)
+## 12. [Sort](12_Sort/README.md) [<img src="https://img.icons8.com/ios/250/000000/circled-up-right-2.png" width="17">](https://www.acmicpc.net/step/9)
