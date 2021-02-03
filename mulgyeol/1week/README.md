@@ -1,35 +1,34 @@
 # Sort
 
-#### List
+### List
 -  [[2750] 수 정렬하기](https://www.acmicpc.net/problem/2750) - [code](./acmicpc_Sort_2750.java)
 -  [[1427] 소트인사이드](https://www.acmicpc.net/problem/1427) - [code](./acmicpc_Sort_1427.java)
 -  [[11650] 좌표 정렬하기](https://www.acmicpc.net/problem/11650) - [code](./acmicpc_Sort_11650.java)
 -  [[11651] 좌표 정렬하기2](https://www.acmicpc.net/problem/11651) - [code](./acmicpc_Sort_11651.java)
 -  [[10814] 수 정렬하기](https://www.acmicpc.net/problem/10814) - [code](./acmicpc_Sort_10814.java)
 
-#### Arrays.sort()
-> <br>
-> 
-> __조건이 복잡한 정렬 작업을 할 때, 유용한 방법 중 하나인 Arrays.sort()에 대해 정리한다.__
-><br>
+### Arrays.sort()
 
-##### 1. Arrays.sort()
+> __조건이 복잡한 정렬 작업을 할 때, 유용한 방법 중 하나인 Arrays.sort()에 대해 정리한다.__
+
+
+#### 1. Arrays.sort()
 ![arraySrotImg](./img/Arrays_sort.PNG)
 - API documnets에서 Arrays의 sort를 찾아보니 다음과 같은 설명이 있었다.
 - sort메서드 사용시 파라미터로, 정렬할 배열 하나와, Comparator 인터페이스를 넘겨줄 수 있었다.
 - 설명 : Comparator에서 유도한 순서에 따라 지정된 개체 배열을 정렬한다.
 
-##### 2. Comparator Interface
+#### 2. Comparator Interface
 ![Comparator](./img/Comparator.PNG)
     - Method Summary를 살펴보면 compare() method를 담고 있고, 이걸로 비교할 값을 설정할 수 있다.
 
 
-##### 3. compare method
+#### 3. compare method
 ![Comparator_method_compare](./img/Comparator_method_compare.PNG)
     - 파라미터로 넘겨준 값들을 비교한다.
 
 
-##### 4. 구체적인 사용 예시
+#### 4. 구체적인 사용 예시
  ```Java
     Arrays.sort(arr,new Comparator<int[]>(){
         @Override
