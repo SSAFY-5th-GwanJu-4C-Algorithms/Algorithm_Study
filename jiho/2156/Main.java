@@ -1,6 +1,7 @@
 /**
  * BOJ 2156 포도주 시식 - DP Bottom Up
  * @author 김지호 jihogrammer@gmail.com
+ * @see http://boj.kr/ef0372e7dfae445d8392158efc827c36
  * @see https://blog.naver.com/jihogrammer/222295512457
  */
 class Main {
