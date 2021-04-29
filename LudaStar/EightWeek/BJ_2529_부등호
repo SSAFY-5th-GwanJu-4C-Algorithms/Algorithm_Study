@@ -1,0 +1,90 @@
+# 백준 2529번 부등호
+
+https://www.acmicpc.net/problem/2529
+
+1. 문제 해석
+부등호가 들어오면 0~9까지의 숫자들로 중복없이 부등호에 맞는 숫자조합을 만들어야 합니다. 만들어지는 숫자조합들 중에 가장 큰 값과 작은 값을 출력해주면 됩니다.
+
+2. 문제 풀이
+숫자조합을 String으로 만들어 부등호를 차례대로 보면서 그에 맞는 숫자를 비교해서 해당 부등호에 맞는 숫자를 뒤에 차근차근 붙여주는 방식으로 진행합니다.
+DFS로 만들어서 부등호 조합을 만족하는 숫자조합이 전부 나오게 되고 그 중에 큰 값과 작은 값을 출력합니다.
+
+
+
+  import java.util.ArrayList;
+  import java.util.Scanner;
+
+  public class baekjoon_S2_2529_부등호 {
+
+    static int k;
+    static char[] arr;
+    static boolean[] visited;
+    static String answer;
+    static ArrayList<String> list;
+
+    public static void main(String[] args) {
+
+      Scanner sc = new Scanner(System.in);
+      k = sc.nextInt();
+      arr = new char[k]; // 입력부등호
+      visited = new boolean[10]; // 0~9
+      answer = "";
+
+      for(int i = 0; i < k; i++) {
+        arr[i] = sc.next().charAt(0);
+      }
+
+      //System.out.println(Arrays.toString(arr));
+
+      list = new ArrayList<>();
+      dfs(0,answer);
+
+
+  //		for(String s : list) {
+  //			System.out.println(s);
+  //		}
+
+      System.out.println(list.get(list.size()-1));
+      System.out.println(list.get(0));
+
+    }
+
+    public static void dfs(int cnt, String current) {
+
+      if(cnt == k+1) {
+        list.add(current);
+        return;
+      }
+
+      for(int i = 0; i <= 9; i++) {
+        // 이미 있는 숫자거나
+        if(visited[i])
+          continue;
+
+        // 부등호방향이랑 수크기가 맞는지 확인
+        if (cnt == 0 ||check(current.charAt(cnt-1), (char)(i+'0'), arr[cnt-1])) {
+          visited[i] = true;
+          dfs(cnt+1, current+Integer.toString(i));
+          visited[i] = false;
+        }
+      }
+
+
+    }
+
+    private static boolean check(char num1, char num2, char c) {
+      switch(c) {
+      case '<' :
+        if(num1 > num2)
+          return false;
+        else return true;
+
+      case '>' :
+        if(num2 > num1)
+          return false;
+        else return true;
+      }
+      return true;
+    }
+
+  }
