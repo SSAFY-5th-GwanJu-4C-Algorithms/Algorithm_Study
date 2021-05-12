@@ -1,5 +1,5 @@
 **1. Make Method**
-```
+```java
 private static void make() {
   for (int i = 0; i < n; i++) {
     parent[i]=i;
@@ -10,7 +10,7 @@ private static void make() {
 <br>
 
 **2. Find Method**
-```
+```java
 private static int find(int a) {
   if(parent[a]==a) return a;
   else return parent[a] = find(parent[a]);
@@ -20,7 +20,7 @@ private static int find(int a) {
 <br>
 
 **3. Union Method**
-```
+```java
 private static boolean union(int a, int b) {
   int aRoot=find(a);
   int bRoot=find(b);
@@ -36,7 +36,7 @@ private static boolean union(int a, int b) {
 <br>
 
 **전체 코드**
-```
+```java
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
